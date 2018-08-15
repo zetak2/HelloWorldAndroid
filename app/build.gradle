@@ -3,7 +3,15 @@ apply plugin: 'com.android.application'
 android {
     lintOptions {
       abortOnError false
-  }
+    }
+    signingConfigs {
+        release {
+            storeFile file("signingtest.jks")
+            storePassword "signingtest"
+            keyAlias "signingtest"
+            keyPassword "signingtest"
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "alvarez.manuel.helloworld"
@@ -15,6 +23,7 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
