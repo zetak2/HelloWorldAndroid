@@ -17,8 +17,8 @@ android {
         applicationId "alvarez.manuel.helloworld"
         minSdkVersion 21
         targetSdkVersion 28
-        //versionCode 2
-        versionName "1.0.1"
+        versionCode 2
+        versionName "1.0.${BUILD_NUMBER}.${env.BUILD_NUMBER}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
