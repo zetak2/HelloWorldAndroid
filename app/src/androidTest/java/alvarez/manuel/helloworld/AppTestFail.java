@@ -9,7 +9,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class AppTest {
+public class AppTestFail {
 
     public static void main(String args[]) throws MalformedURLException{
         DesiredCapabilities capabilities = new DesiredCapabilities ();
@@ -38,7 +38,7 @@ public class AppTest {
         MobileElement el7 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView");
         el7.click();
 
-        Assert.assertEquals(driver.findElementById("alvarez.manuel.helloworld:id/txtName").getText(),"Manuel");
+        Assert.assertEquals(driver.findElementById("alvarez.manuel.helloworld:id/txtName").getText(),"Fail");
 
     }
 
